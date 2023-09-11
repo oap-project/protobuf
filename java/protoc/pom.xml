@@ -6,9 +6,9 @@
     <artifactId>google</artifactId>
     <version>5</version>
   </parent>
-  <groupId>com.google.protobuf</groupId>
+  <groupId>io.glutenproject</groupId>
   <artifactId>protoc</artifactId>
-  <version>3.23.4</version>
+  <version>3.23.4-0</version>
   <packaging>pom</packaging>
   <name>Protobuf Compiler</name>
   <description>

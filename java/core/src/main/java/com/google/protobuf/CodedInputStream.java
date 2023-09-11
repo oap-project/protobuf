@@ -63,7 +63,7 @@ public abstract class CodedInputStream {
   private static final int DEFAULT_BUFFER_SIZE = 4096;
   // Integer.MAX_VALUE == 0x7FFFFFF == INT_MAX from limits.h
   private static final int DEFAULT_SIZE_LIMIT = Integer.MAX_VALUE;
-  private static volatile int defaultRecursionLimit = 100;
+  private static volatile int defaultRecursionLimit = 100000;
 
   /** Visible for subclasses. See setRecursionLimit() */
   int recursionDepth;
