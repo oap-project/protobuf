@@ -35,8 +35,8 @@
   </licenses>
 
   <scm>
-    <url>https://github.com/protocolbuffers/protobuf</url>
-    <connection>scm:git:https://github.com/protocolbuffers/protobuf.git</connection>
+    <url>https://github.com/weiting-chen/protobuf</url>
+    <connection>scm:git:https://github.com/weiting-chen/protobuf.git</connection>
   </scm>
 
   <properties>
@@ -45,12 +45,12 @@
 
   <distributionManagement>
     <snapshotRepository>
-      <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
     </snapshotRepository>
     <repository>
-      <id>sonatype-nexus-staging</id>
-      <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+      <id>ossrh</id>
+      <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
 
@@ -78,7 +78,7 @@
            and try again. -->
       <id>release</id>
       <build>
-        <plugins>
+       <plugins>
           <plugin>
             <artifactId>maven-gpg-plugin</artifactId>
             <version>1.6</version>
@@ -95,12 +95,12 @@
           <plugin>
             <groupId>org.sonatype.plugins</groupId>
 	    <artifactId>nexus-staging-maven-plugin</artifactId>
-            <version>1.6.6</version>
+            <version>1.6.7</version>
             <extensions>true</extensions>
             <configuration>
-              <nexusUrl>https://oss.sonatype.org/</nexusUrl>
-              <serverId>sonatype-nexus-staging</serverId>
-              <autoReleaseAfterClose>false</autoReleaseAfterClose>
+              <nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
+              <serverId>ossrh</serverId>
+              <autoReleaseAfterClose>true</autoReleaseAfterClose>
             </configuration>
           </plugin>
         </plugins>
